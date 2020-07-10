@@ -687,7 +687,7 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
-baidu_analytics: ed24fc000e28df9877e76164370e20b8 
+baidu_analytics: 679317b3fa5229c665aa6b457fc5c2f6
 
 # Growingio Analytics
 growingio_analytics: # <project_id>
@@ -722,7 +722,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: true 
+  enable: false 
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
