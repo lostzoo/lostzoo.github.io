@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Lostzoo 
-subtitle: ''
-description: 'Technology Share'
-keywords: 'Private Note'
+title: "Dong Zi'Blog" 
+subtitle: 'Technology Note'
+description: 'Technology Note'
+keywords: 'Technology Note'
 author: 'Dong Zi' 
-language: en
+language: zh-CN 
 timezone: 'Asia/Shanghai'
 
 # URL
