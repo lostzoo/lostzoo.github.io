@@ -646,7 +646,7 @@ livere_uid: # <your_uid>
 gitalk:
   enable: true  
   github_id: lostzoo
-  repo: https://github.com/lostzoo/github.io.comment
+  repo: github.io.comment
   client_id: bf5a3e7272912648eb25
   client_secret: 35d22b696d1e736a9c626c9f589bea2382f9f762
   admin_user: lostzoo 
