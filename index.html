@@ -9,7 +9,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <link rel="manifest" href="/images/manifest.json">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -21,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lostzoo.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+    var CONFIG = {"hostname":"lostzoo.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="Technology Note">
@@ -131,19 +130,24 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">58</span></a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
 
   </li>
         <li class="menu-item menu-item-about">
@@ -209,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/hello-hexo/">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -223,7 +227,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/11/hello-hexo/" class="post-title-link" itemprop="url">Hello Hexo</a>
+            <a href="/2020/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">数据结构/数组的概念</a>
         </h2>
 
         <div class="post-meta">
@@ -233,16 +237,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-07-11 11:43:09" itemprop="dateCreated datePublished" datetime="2020-07-11T11:43:09+08:00">2020-07-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-                </span>
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
             </span>
 
           
@@ -256,19 +251,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation<i class="fa fa-external-link-alt"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting<i class="fa fa-external-link-alt"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub<i class="fa fa-external-link-alt"></i></span>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment<i class="fa fa-external-link-alt"></i></span></p>
+          <h1 id="数组的概念"><a href="#数组的概念" class="headerlink" title="数组的概念"></a>数组的概念</h1><p>#数据结构/入门/数组/概念</p>
 
       
     </div>
@@ -276,6 +259,8 @@
     
     
     
+      
+
       <footer class="post-footer">
         <div class="post-eof"></div>
       </footer>
@@ -288,7 +273,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/hello-math-tag/">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -302,7 +287,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/11/hello-math-tag/" class="post-title-link" itemprop="url">Hello Hexo</a>
+            <a href="/2020/07/11/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/README/" class="post-title-link" itemprop="url">高等数学/README</a>
         </h2>
 
         <div class="post-meta">
@@ -312,16 +297,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-07-11 11:43:09" itemprop="dateCreated datePublished" datetime="2020-07-11T11:43:09+08:00">2020-07-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
-                </span>
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
             </span>
 
           
@@ -335,26 +311,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation<i class="fa fa-external-link-alt"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting<i class="fa fa-external-link-alt"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub<i class="fa fa-external-link-alt"></i></span>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment<i class="fa fa-external-link-alt"></i></span></p>
-
+          <h1 id="BearNote笔记"><a href="#BearNote笔记" class="headerlink" title="BearNote笔记"></a>BearNote笔记</h1><blockquote>
+</blockquote>
+<h2 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a><a href="高等数学">高等数学</a></h2>
       
     </div>
 
     
     
     
+      
+
       <footer class="post-footer">
         <div class="post-eof"></div>
       </footer>
@@ -367,7 +334,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/hello-math/">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB/README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -381,7 +348,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/11/hello-math/" class="post-title-link" itemprop="url">Hello  Math</a>
+            <a href="/2020/07/11/%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB/README/" class="post-title-link" itemprop="url">英语阅读/README</a>
         </h2>
 
         <div class="post-meta">
@@ -391,16 +358,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-07-11 11:43:09" itemprop="dateCreated datePublished" datetime="2020-07-11T11:43:09+08:00">2020-07-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-                </span>
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
             </span>
 
           
@@ -414,15 +372,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>$$\begin{equation} \label{eq1}<br>e=mc^2<br>\end{equation}$$ </p>
-<p>$$\begin{equation} \label{eq2}<br>\begin{aligned}<br>a &amp;= b + c \<br>  &amp;= d + e + f + g \<br>  &amp;= h + i<br>\end{aligned}<br>\end{equation}$$<br>More info : <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoaXJkLXBhcnR5LXNlcnZpY2VzL21hdGgtZXF1YXRpb25zLmh0bWw=">Math<i class="fa fa-external-link-alt"></i></span><br>$$x+1\over\sqrt{1-x^2} \tag{i}\label{eq_tag}$$</p>
-
+          <h1 id="BearNote笔记"><a href="#BearNote笔记" class="headerlink" title="BearNote笔记"></a>BearNote笔记</h1><blockquote>
+</blockquote>
+<h2 id="阅读理解"><a href="#阅读理解" class="headerlink" title="阅读理解"></a><a href="阅读理解">阅读理解</a></h2>
       
     </div>
 
     
     
     
+      
+
       <footer class="post-footer">
         <div class="post-eof"></div>
       </footer>
@@ -435,7 +395,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -449,7 +409,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/11/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2020/07/11/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/README/" class="post-title-link" itemprop="url">编程语言/README</a>
         </h2>
 
         <div class="post-meta">
@@ -459,7 +419,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-07-11 11:43:09" itemprop="dateCreated datePublished" datetime="2020-07-11T11:43:09+08:00">2020-07-11</time>
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
             </span>
 
           
@@ -473,19 +433,152 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation<i class="fa fa-external-link-alt"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting<i class="fa fa-external-link-alt"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub<i class="fa fa-external-link-alt"></i></span>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+          <h1 id="BearNote笔记"><a href="#BearNote笔记" class="headerlink" title="BearNote笔记"></a>BearNote笔记</h1><blockquote>
+</blockquote>
+<h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a><a href="编程语言">编程语言</a></h2>
+      
+    </div>
 
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+    
+    
+    
+      
 
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/README/">
 
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment<i class="fa fa-external-link-alt"></i></span></p>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/11/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/README/" class="post-title-link" itemprop="url">线性代数/README</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="BearNote笔记"><a href="#BearNote笔记" class="headerlink" title="BearNote笔记"></a>BearNote笔记</h1><blockquote>
+</blockquote>
+<h2 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a><a href="线性代数">线性代数</a></h2>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E7%86%8A%E6%8E%8C%E8%AE%B0/%E7%AE%A1%E7%90%86%E4%B8%8E%E5%8F%91%E5%B8%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/11/%E7%86%8A%E6%8E%8C%E8%AE%B0/%E7%AE%A1%E7%90%86%E4%B8%8E%E5%8F%91%E5%B8%83/" class="post-title-link" itemprop="url">熊掌记/管理与发布</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="管理与发布"><a href="#管理与发布" class="headerlink" title="管理与发布"></a>管理与发布</h1><h1 id="管理与发布-1"><a href="#管理与发布-1" class="headerlink" title="管理与发布"></a>管理与发布</h1><p>让我们进一步了解熊掌记及其功能。 如果你想要从头开始，请回到[[欢迎使用熊掌记]]，也可以直接跳转到[[Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…]]以及[[方法与技巧]]。</p>
+<h2 id="在任何地点工作-☁️"><a href="#在任何地点工作-☁️" class="headerlink" title="在任何地点工作 ☁️"></a>在任何地点工作 ☁️</h2><p>你在写作时笔记会在设备上自动保存：这就是没有保存按钮的原因。 😄</p>
+<p>如果你想在 Mac、iPad 和 iPhone 之间同步笔记，请<span class="exturl" data-url="YmVhcjovL3gtY2FsbGJhY2stdXJsL29wZW4tYmVhci1wcm8=">升级到 Bear Pro<i class="fa fa-external-link-alt"></i></span>。Bear Pro 提供多种功能，同时熊掌记将使用你的 iCloud 帐户在你的所有设备间更新笔记。</p>
+<p>熊掌记同时还支持在您的 iPad、iPhone 和 Mac 之间使用 <span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0LmFwcGxlLmNvbS96aC1jbi9IVDIwNDY4MQ==">Apple 的“接力”技术<i class="fa fa-external-link-alt"></i></span>。 此功能将使您能够在一台设备上新建笔记后，迅速切换到其他设备上继续创作。</p>
+<h2 id="标签和子标签-🏷"><a href="#标签和子标签-🏷" class="headerlink" title="标签和子标签 🏷"></a>标签和子标签 🏷</h2><p><strong>标签</strong>是熊掌记管理笔记的强大功能之一。</p>
+<p>在中文词语两侧“ #欢迎# ”加入井字，熊掌记就会将其当作文件夹或分类，把所有具有相同标签的笔记整合起来。 所有标签都会显示在侧边栏，也就是熊掌记的左侧面板。</p>
+<p>利用标签，你可将类似内容的笔记按项目、主题或其他原则归类。</p>
+<p>下方列出了一些关于标签的方法与技巧：</p>
+<ul>
+<li>在每篇笔记中，你可任意添加标签，数量不限，即时生效。</li>
+<li>对于英语等单词间有空格的语言，单个词语的标签在空格后自动生成，而在词组两侧加入井字符号则可创建<span class="exturl" data-url="aHR0cHM6Ly9iZWFyLmFwcC9vcmdhbml6ZS1ub3Rlcy13aXRoLXRhZ3MtYW5kLWluZmluaXRlLW5lc3RlZC10YWdzLWM0MmIwMmIyYzBkNw==">词组标签<i class="fa fa-external-link-alt"></i></span>。例如：<code>#Star Wars# #Home Improvement# #World Domination#</code></li>
+<li>您可以在笔记正文的任何位置插入标签（标题除外）——开头、结尾、每段之后，都可以。这完全由你决定。</li>
+<li>将一篇或多篇笔记拖放到侧边栏上的标签即可为这些笔记批量添加对应标签。</li>
+</ul>
+<p>阅读 [[欢迎使用熊掌记]] 了解更多关于熊掌记排版布局的核心功能。</p>
+<h3 id="别急，还有更多！"><a href="#别急，还有更多！" class="headerlink" title="别急，还有更多！"></a>别急，还有更多！</h3><p>熊掌记还可通过子标签将标签联系起来。例如：你添加了一个“#欢迎/管理”的标签。在侧边栏中，“管理”就会成为“欢迎”的子标签！</p>
+<p>子标签在侧边栏的作用和子文件夹类似。点击标签旁边的按钮即可展开/关闭，方便查看子标签。在熊掌记中你可以方便的管理标签，我们希望你在实际工作中可以尝试使用。</p>
+<h2 id="在任何地方发布-🌐"><a href="#在任何地方发布-🌐" class="headerlink" title="在任何地方发布 🌐"></a>在任何地方发布 🌐</h2><p>当您想将笔记发送到其他应用，或发送给朋友时，请点击笔记右上角的信息面板ⓘ按钮。熊掌记提供多种灵活的导出选项。</p>
+<p>免费版的熊掌记可将笔记导出为纯文本、Markdown、<span class="exturl" data-url="aHR0cDovL3RleHRidW5kbGUub3JnLw==">TextBundle<i class="fa fa-external-link-alt"></i></span>、富文本以及<span class="exturl" data-url="aHR0cHM6Ly93d3cudGFza3BhcGVyLmNvbQ==">TaskPaper<i class="fa fa-external-link-alt"></i></span>格式。</p>
+<p><span class="exturl" data-url="YmVhcjovL3gtY2FsbGJhY2stdXJsL29wZW4tYmVhci1wcm8=">订阅 Bear Pro<i class="fa fa-external-link-alt"></i></span>后还可导出为 PDF、HTML、Word (DOCX) 格式，还可导出为 JPG 格式的图片。将熊掌记导出为 JPG 图片可以方便地在社交网站和其他有字数限制的平台上发布。</p>
+<h2 id="详细信息-🔍"><a href="#详细信息-🔍" class="headerlink" title="详细信息 🔍"></a>详细信息 🔍</h2><p>在信息面板的<strong>字数统计工具</strong>中你可了解字数、段落数和预估的<strong>阅读时间</strong>。</p>
+<h2 id="了解-Bear-Pro-🐻🚀"><a href="#了解-Bear-Pro-🐻🚀" class="headerlink" title="了解 Bear Pro 🐻🚀"></a>了解 Bear Pro 🐻🚀</h2><p>继续阅读下一篇笔记——[[Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…]]，了解如何在多设备间同步，获得更多导出选项以及不断增加的<span class="exturl" data-url="YmVhcjovL3gtY2FsbGJhY2stdXJsL29wZW4tdGhlbWVz">精美主题<i class="fa fa-external-link-alt"></i></span> ，为您提供更完美的书写环境。</p>
+<h3 id="了解更多"><a href="#了解更多" class="headerlink" title="了解更多"></a>了解更多</h3><p>[[欢迎使用熊掌记]]<br>[[Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…]]<br>[[方法与技巧]]</p>
+<p>#欢迎/管理 #欢迎</p>
 
       
     </div>
@@ -493,6 +586,288 @@
     
     
     
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E7%86%8A%E6%8E%8C%E8%AE%B0/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8%E7%86%8A%E6%8E%8C%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/11/%E7%86%8A%E6%8E%8C%E8%AE%B0/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8%E7%86%8A%E6%8E%8C%E8%AE%B0/" class="post-title-link" itemprop="url">熊掌记/欢迎使用熊掌记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="欢迎使用熊掌记"><a href="#欢迎使用熊掌记" class="headerlink" title="欢迎使用熊掌记"></a>欢迎使用熊掌记</h1><h1 id="欢迎使用熊掌记-1"><a href="#欢迎使用熊掌记-1" class="headerlink" title="欢迎使用熊掌记"></a>欢迎使用熊掌记</h1><p>熊掌记是一款用于优美、流畅写作笔记和文章的应用。熊掌记上手和掌握非常容易，接下来就展示给大家！你还可以<a href="www.weibo.com/xiongzhangji">关注我们的官方微博</a>，了解更多实用小窍门，最新资讯<span class="exturl" data-url="aHR0cDovL2JlYXIuYXBwL2NuL2ZhcS8=">以及更多内容<i class="fa fa-external-link-alt"></i></span>。</p>
+<h2 id="熊掌记的界面包含三部分-🐻"><a href="#熊掌记的界面包含三部分-🐻" class="headerlink" title="熊掌记的界面包含三部分 🐻"></a>熊掌记的界面包含三部分 🐻</h2><p>熊掌记包含三栏，供你创建、编辑和管理笔记。</p>
+<ul>
+<li><strong>边栏</strong>（左侧）：在笔记中加入标签后，熊掌记就会将标签显示在侧边栏中。你可以当作它们是在写作时可即时创建并使用的文件夹。</li>
+<li><strong>笔记列表</strong>（中间）：你所有的笔记都在这里，按照修改日期排序。你也可以 <strong>置顶</strong> 笔记。</li>
+<li><strong>编辑器</strong>（右侧）：这里是创作的空间，也是你现在所处的位置。😄</li>
+</ul>
+<p><strong>注意</strong>：在 iPhone 版的熊掌记中，你可以通过左右滑动在侧边栏、笔记列表、编辑器之间切换。</p>
+<h2 id="熊掌记的样式-✒️"><a href="#熊掌记的样式-✒️" class="headerlink" title="熊掌记的样式 ✒️"></a>熊掌记的样式 ✒️</h2><p>熊掌记包含许多文本和样式工具，包括：<strong>粗体</strong>、<em>斜体_、 _下划线</em> 、::高亮显示:: 、 -删除线- 、1-6 号标题、以及更多内容。你可以在<strong>样式面板</strong>中快速找到它们：</p>
+<ul>
+<li><strong>Mac</strong>：点击编辑器右下角的钢笔图标</li>
+<li><strong>iPhone 或 iPad</strong>：面板在输入键盘上方的快捷工具条中</li>
+</ul>
+<p>熊掌记自带一系列的<span class="exturl" data-url="YmVhcjovL3gtY2FsbGJhY2stdXJsL29wZW4tdGhlbWVz">精美主题<i class="fa fa-external-link-alt"></i></span>为你提供舒适的写作环境。熊掌记部分功能是免费的，还有更多功能在<span class="exturl" data-url="YmVhcjovL3gtY2FsbGJhY2stdXJsL29wZW4tYmVhci1wcm8=">Bear Pro<i class="fa fa-external-link-alt"></i></span> 中等你发现。</p>
+<h2 id="适合所有人的工具-🛠"><a href="#适合所有人的工具-🛠" class="headerlink" title="适合所有人的工具 🛠"></a>适合所有人的工具 🛠</h2><p>熊掌记简洁却又灵活，上手快速，想要变成熊掌记的笔记高手也不难。另外，这里还有更多功能等你探索！ 你可以：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cDovL3dlaWJvLmNvbS82NzkyNTI4OTc4L0h6TmZNdWFTVw==">通过标签管理笔记<i class="fa fa-external-link-alt"></i></span>并且支持无限嵌套标签</li>
+<li><span class="exturl" data-url="aHR0cDovL3dlaWJvLmNvbS82NzkyNTI4OTc4L0hob3Z4ZFo5QQ==">导出笔记<i class="fa fa-external-link-alt"></i></span>并分享到其他地方</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmJlYXIuYXBwLzIwMTcvMDkvYmVhci10aXBzLXBpbi1ub3Rlcy10by10aGUtdG9wLXRvLXN0YXktb24tdGFzay8=">置顶笔记<i class="fa fa-external-link-alt"></i></span>以便快速访问</li>
+<li><span class="exturl" data-url="aHR0cDovL3dlaWJvLmNvbS82NzkyNTI4OTc4L0hlbWE5YkZyVQ==">设置标签图标<i class="fa fa-external-link-alt"></i></span>在侧边栏中突出显示重要的标签</li>
+<li>使用<span class="exturl" data-url="aHR0cHM6Ly9iZWFyLmFwcC9jbi9mYXEvQmVhciUyMGZvciUyMEFwcGxlJTIwV2F0Y2glMjBvdmVydmlldy8=">Apple Watch 版本的熊掌记<i class="fa fa-external-link-alt"></i></span>随时随地快速口述笔记</li>
+<li>添加照片和文件（单个文件最大支持 250MB）</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vNjc5MjUyODk3OC9IZ2lzbXFOdVk=">跟踪任务进度<i class="fa fa-external-link-alt"></i></span></li>
+<li>使用 Apple Pencil 或其他手写笔 <span class="exturl" data-url="aHR0cHM6Ly9iZWFyLmFwcC9jbi9mYXEvQXR0YWNobWVudHMvQWRkJTIwU2tldGNoZXMlMjB0byUyMHlvdXIlMjBub3Rlcy8=">在 iPad 上速写<i class="fa fa-external-link-alt"></i></span></li>
+<li>更多内容等你发现！</li>
+</ul>
+<p>你甚至还可以<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmJlYXIuYXBwLzIwMTcvMDMvYmVhci10aXBzLWxpbmstbm90ZXMtZm9yLWZ1bi1hbmQtcHJvZml0Lw==">在笔记中链接其他笔记<i class="fa fa-external-link-alt"></i></span>。请继续浏览熊掌记为你提供的下一篇介绍：[[管理与发布]]。😉</p>
+<p>#欢迎  #欢迎/新手上路</p>
+
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E7%86%8A%E6%8E%8C%E8%AE%B0/Bear%20Pro%20=%20%E5%90%8C%E6%AD%A5+%E5%8A%A0%E5%AF%86+%E5%A4%9A%E7%A7%8D%E5%AF%BC%E5%87%BA%E6%A0%BC%E5%BC%8F+%E6%9B%B4%E5%A4%9A%E4%B8%BB%E9%A2%98+%E6%9C%AA%E6%9D%A5%E6%9B%B4%E5%A4%9A%E2%80%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/11/%E7%86%8A%E6%8E%8C%E8%AE%B0/Bear%20Pro%20=%20%E5%90%8C%E6%AD%A5+%E5%8A%A0%E5%AF%86+%E5%A4%9A%E7%A7%8D%E5%AF%BC%E5%87%BA%E6%A0%BC%E5%BC%8F+%E6%9B%B4%E5%A4%9A%E4%B8%BB%E9%A2%98+%E6%9C%AA%E6%9D%A5%E6%9B%B4%E5%A4%9A%E2%80%A6/" class="post-title-link" itemprop="url">熊掌记/Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Bear-Pro-同步-加密-多种导出格式-更多主题-未来更多…"><a href="#Bear-Pro-同步-加密-多种导出格式-更多主题-未来更多…" class="headerlink" title="Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…"></a>Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…</h1><h1 id="Bear-Pro-同步-加密-多种导出格式-更多主题-未来更多…-1"><a href="#Bear-Pro-同步-加密-多种导出格式-更多主题-未来更多…-1" class="headerlink" title="Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…"></a>Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…</h1><p>这是教程的最后一部分！ 你可以查看熊掌记教程的其他章节，[[欢迎使用熊掌记]]、[[管理与发布]]以及[[方法与技巧]]。</p>
+<h2 id="附加功能"><a href="#附加功能" class="headerlink" title="附加功能"></a>附加功能</h2><p>你可以在 iPad、iPhone 和 Mac 上使用熊掌记绝大多数的核心功能。我们希望这独特的工具能让所有人都写出漂亮、整洁的笔记。</p>
+<h2 id="Bear-Pro"><a href="#Bear-Pro" class="headerlink" title="Bear Pro"></a>Bear Pro</h2><p><span class="exturl" data-url="YmVhcjovL3gtY2FsbGJhY2stdXJsL29wZW4tYmVhci1wcm8=">一个 Bear Pro 订阅<i class="fa fa-external-link-alt"></i></span>可用于你的所有设备，并解锁更多功能、精美主题，同时支持熊掌记的持续研发。</p>
+<ul>
+<li>在 iPad、iPhone 和 Mac 上的熊掌记之间通过 iCloud <strong>同步</strong>所有笔记。在[[管理与发布]]中了解更多关于熊掌记同步和自动保存的内容。</li>
+<li><strong>加密笔记和锁定熊掌记</strong>。使用只有你知道的密码加密单篇笔记，并使用面容/触控 ID 或设备密码锁定熊掌记。</li>
+<li>为你的笔记提供多种额外的<strong>导出</strong>格式选项，包括 PDF、Word (DOCX)、HTML、JPG 在内的灵活格式使发布和分享更方便。在[[管理与发布]]中了解更多关于熊掌记导出功能的内容。</li>
+<li><strong>多达 18 款精美主题</strong>。你可以选择合适的创意环境，让你的文章在发布前后都魅力十足。</li>
+</ul>
+<p>Bear Pro 提供免费试用。包月订阅服务将赠送你一周免费试用期。包年订阅服务赠送一个月免费试用期。在 iPad、iPhone 和 Mac 上的的应用内设置菜单中了解<span class="exturl" data-url="YmVhcjovL3gtY2FsbGJhY2stdXJsL29wZW4tYmVhci1wcm8=">Bear Pro<i class="fa fa-external-link-alt"></i></span>并订阅。</p>
+<p>非常感谢你的支持！<br>🐻🎉❤️📝😊</p>
+<h3 id="了解更多"><a href="#了解更多" class="headerlink" title="了解更多"></a>了解更多</h3><p>[[欢迎使用熊掌记]]<br>[[管理与发布]]<br>[[方法与技巧]]</p>
+<p>#欢迎</p>
+
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E6%97%B6%E4%BA%8B%E6%94%BF%E6%B2%BB/README/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/11/%E6%97%B6%E4%BA%8B%E6%94%BF%E6%B2%BB/README/" class="post-title-link" itemprop="url">时事政治/README</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="BearNote笔记"><a href="#BearNote笔记" class="headerlink" title="BearNote笔记"></a>BearNote笔记</h1><blockquote>
+</blockquote>
+<h2 id="时事政治"><a href="#时事政治" class="headerlink" title="时事政治"></a><a href="时事政治">时事政治</a></h2>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%A1%BA%E5%BA%8F%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%A1%BA%E5%BA%8F%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">数据结构/顺序文件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-11 23:19:41" itemprop="dateCreated datePublished" datetime="2020-07-11T23:19:41+08:00">2020-07-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="顺序文件"><a href="#顺序文件" class="headerlink" title="顺序文件"></a>顺序文件</h1><p>#数据结构/高级/文件与查找/顺序文件</p>
+
+      
+    </div>
+
+    
+    
+    
+      
+
       <footer class="post-footer">
         <div class="post-eof"></div>
       </footer>
@@ -503,6 +878,9 @@
 
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -569,21 +947,9 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">日志</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -597,7 +963,10 @@
   </div>
 
 
-
+<!-- CloudCalendar -->
+<div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+	<div class="widget" id="CloudCalendar"></div>
+</div>
       </div>
 
     </div>
@@ -623,6 +992,8 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Dong Zi</span>
 </div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
 
         
 
@@ -644,6 +1015,7 @@
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -652,7 +1024,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -770,61 +1142,6 @@ window.addEventListener('pjax:success', () => {
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
@@ -837,6 +1154,23 @@ window.addEventListener('pjax:success', () => {
       });
       });
   </script>
+<!-- calendar widget -->
+
+    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js"></script>
+    <script>
+    $(function() {
+        $('#CloudCalendar').aCalendar('zh-CN',
+            $.extend(
+                '', {
+                    single:true,
+                    root:'/calendar/'
+                }
+            )
+        );
+    });
+    </script>
+
 
     </div>
 </body>
