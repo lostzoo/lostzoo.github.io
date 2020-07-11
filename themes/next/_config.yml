@@ -44,11 +44,11 @@ favicon:
   medium: /images/favicon-32x32-next.png
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
-  android_manifest: /images/manifest.json
+  #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
 # Show multilingual switcher in footer.
-language_switcher: true 
+language_switcher: false 
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
@@ -59,7 +59,7 @@ footer:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
     name: fa fa-heart
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true 
     # Change the color of icon, using Hex Code.
     color: "#ff0000"
 
@@ -67,7 +67,12 @@ footer:
   copyright:
 
   # Powered by Hexo & NexT
-  powered: false 
+  powered:
+      enable: true
+      version: true
+  theme:
+      enable: true
+      version: true
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
@@ -98,9 +103,9 @@ creative_commons:
 
 # Schemes
 #scheme: Muse
-scheme: Mist
+#scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -117,11 +122,11 @@ darkmode: false
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
   archives: /archives/ || fa fa-archive
+  schedule: /schedule/ || fa fa-calendar
   about: /about/ || fa fa-user
-  #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
 
@@ -232,7 +237,7 @@ chat:
 # ---------------------------------------------------------------
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false 
 
 # Read more button
 # If true, the read more button will be displayed in excerpt section.
@@ -255,7 +260,7 @@ symbols_count_time:
   item_text_total: true 
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: true 
+tag_icon: false 
 
 # Reward (Donate)
 # Front-matter variable (unsupport animation).
@@ -282,9 +287,9 @@ follow_me:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
+  enable: true 
   title: # Custom header, leave empty to use the default one
-  display_in_home: false
+  display_in_home: true 
   params:
     maxCount: 5
     #PPMixingRate: 0.0
@@ -296,7 +301,7 @@ related_posts:
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
   enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
+  #url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
@@ -317,12 +322,20 @@ tagcloud:
   start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
   end: "#111" # End color (hex, rgba, hsla or color keywords)
   amount: 200 # Amount of tags, change it if you have more than 200 tags
-
+# Calendar:
+CloudCalendar:
+  enable: true
+  language: zh-CN
+  single: true
+  root: /calendar/
+  calendarCdn: //cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js
+  langCdn: //cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js
+  #disableSidebar: false
 # Google Calendar
 # Share your recent schedule to others via calendar page.
 calendar:
-  calendar_id: <required> # Your Google account E-Mail
-  api_key: <required>
+  calendar_id: gao.dong.dong.china@gmail.com # Your Google account E-Mail
+  api_key: AIzaSyAVXBcKkeE7Ah0BjNp2vH-JXu02FAgWRlQ 
   orderBy: startTime
   offsetMax: 24 # Time Range
   offsetMin: 4 # Time Range
@@ -535,14 +548,14 @@ lazyload: true
 
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
-pangu: false 
+pangu: true 
 
 # Quicklink Support
 # Do not enable both `pjax` and `quicklink`.
 # For more information: https://github.com/GoogleChromeLabs/quicklink
 # Front-matter (unsupport home archive).
 quicklink:
-  enable: false 
+  enable: true 
   home: true
   archive: true
   delay: true
@@ -746,7 +759,7 @@ local_search:
   preload: false
 
 # Swiftype Search API Key
- # swiftype_key: i6aaSMcCxegqNqMoo6gY
+# swiftype_key: i6aaSMcCxegqNqMoo6gY
 
 # ---------------------------------------------------------------
 # Chat Services
@@ -910,11 +923,11 @@ vendors:
   # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.14.0/lozad.min.js
 
   # Pangu
-  # pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
+  pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
   # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js
 
   # Quicklink
-  # quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
+  quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
 
   # DisqusJS
   # disqusjs_js: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
