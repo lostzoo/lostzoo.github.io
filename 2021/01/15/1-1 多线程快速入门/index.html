@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"lostzoo.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="多线程快速入门线程与进程区别每个正在系统上运行的程序都是一个进程。每个进程包含一到多个线程。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。使用线程可以把占据时间长的程序中的任务放到后台去处理，程序的运行速度可能加快，在一些等待的任务实现上如用户输">
+  <meta name="description" content="多线程基础线程与进程区别每个正在系统上运行的程序都是一个进程。每个进程包含一到多个线程。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。使用线程可以把占据时间长的程序中的任务放到后台去处理，程序的运行速度可能加快，在一些等待的任务实现上如用户输入、">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多线程快速入门">
 <meta property="og:url" content="https://lostzoo.github.io/2021/01/15/1-1%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="Dong Zi&#39;Blog">
-<meta property="og:description" content="多线程快速入门线程与进程区别每个正在系统上运行的程序都是一个进程。每个进程包含一到多个线程。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。使用线程可以把占据时间长的程序中的任务放到后台去处理，程序的运行速度可能加快，在一些等待的任务实现上如用户输">
+<meta property="og:description" content="多线程基础线程与进程区别每个正在系统上运行的程序都是一个进程。每个进程包含一到多个线程。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。使用线程可以把占据时间长的程序中的任务放到后台去处理，程序的运行速度可能加快，在一些等待的任务实现上如用户输入、">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-16T10:22:54.761Z">
+<meta property="article:modified_time" content="2021-01-16T12:44:15.325Z">
 <meta property="article:author" content="Dong Zi">
 <meta property="article:tag" content="并发编程">
 <meta name="twitter:card" content="summary">
@@ -240,7 +240,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-01-16 00:00:00 / 修改时间：18:22:54" itemprop="dateCreated datePublished" datetime="2021-01-16T00:00:00+08:00">2021-01-16</time>
+              <time title="创建时间：2021-01-16 00:00:00 / 修改时间：20:44:15" itemprop="dateCreated datePublished" datetime="2021-01-16T00:00:00+08:00">2021-01-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -267,22 +267,56 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="多线程快速入门"><a href="#多线程快速入门" class="headerlink" title="多线程快速入门"></a>多线程快速入门</h1><h2 id="线程与进程区别"><a href="#线程与进程区别" class="headerlink" title="线程与进程区别"></a>线程与进程区别</h2><p>每个正在系统上运行的程序都是一个进程。每个进程包含一到多个线程。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。<br>使用线程可以把占据时间长的程序中的任务放到后台去处理，程序的运行速度可能加快，在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下可以释放一些珍贵的资源如内存占用等等。<br>如果有大量的线程,会影响性能，因为操作系统需要在它们之间切换，更多的线程需要更多的内存空间，线程的中止需要考虑其对程序运行的影响。通常块模型数据是在多个线程间共享的，需要防止线程死锁情况的发生。<br>总结:进程是所有线程的集合，每一个线程是进程中的一条执行路径。</p>
-<h2 id="为什么要使用多线程？多线程应用场景？"><a href="#为什么要使用多线程？多线程应用场景？" class="headerlink" title="为什么要使用多线程？多线程应用场景？"></a>为什么要使用多线程？多线程应用场景？</h2><p>答:主要能体现到多线程提高程序效率。<br>举例: 迅雷多线程下载、数据库连接池、分批发送短信等。</p>
-<h2 id="多线程创建方式"><a href="#多线程创建方式" class="headerlink" title="多线程创建方式"></a>多线程创建方式</h2><p>第一种继承 Thread 类 重写 run 方法<br>第二种实现 Runnable 接口,重写 run 方法<br>第三种使用匿名内部类方式</p>
-<p>使用继承 Thread 类还是使用实现 Runnable 接口好？<br>使用实现实现 Runnable 接口好，原因实现了接口还可以继续继承，继承了类不能再继承。<br>启动线程是使用调用 start 方法还是 run 方法？<br>开始执行线程 注意 开启线程不是调用 run 方法，而是 start 方法<br>调用 run 知识使用实例调用方法。</p>
-<h2 id="获取线程对象以及名称"><a href="#获取线程对象以及名称" class="headerlink" title="获取线程对象以及名称"></a>获取线程对象以及名称</h2><h2 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h2><p>Java 中有两种线程，一种是用户线程，另一种是守护线程。<br>用户线程是指用户自定义创建的线程，主线程停止，用户线程不会停止<br>守护线程当进程不存在或主线程停止，守护线程也会被停止。<br>使用 setDaemon(true)方法设置为守护线程</p>
-<h2 id="多线程运行状态"><a href="#多线程运行状态" class="headerlink" title="多线程运行状态"></a>多线程运行状态</h2><p>线程从创建、运行到结束总是处于下面五个状态之一：新建状态、就绪状态、运行状态、阻塞状态及死亡状态。</p>
-<h3 id="新建状态"><a href="#新建状态" class="headerlink" title="新建状态"></a>新建状态</h3><p>当用 new 操作符创建一个线程时， 例如 new Thread(r)，线程还没有开始运行，此时线程处在新建状态。 当一个线程处于新生状态时，程序还没有开始运行线程中的代码</p>
-<h3 id="就绪状态"><a href="#就绪状态" class="headerlink" title="就绪状态"></a>就绪状态</h3><p>一个新创建的线程并不自动开始运行，要执行线程，必须调用线程的 start()方法。当线程对象调用 start()方法即启动了线程，start()方法创建线程运行的系统资源，并调度线程运行 run()方法。当 start()方法返回后，线程就处于就绪状态。<br>      处于就绪状态的线程并不一定立即运行 run()方法，线程还必须同其他线程竞争 CPU 时间，只有获得 CPU 时间才可以运行线程。因为在单 CPU 的计算机系统中，不可能同时运行多个线程，一个时刻仅有一个线程处于运行状态。因此此时可能有多个线程处于就绪状态。对多个处于就绪状态的线程是由 Java 运行时系统的线程调度程序(thread scheduler)来调度的。</p>
+        <h1 id="多线程基础"><a href="#多线程基础" class="headerlink" title="多线程基础"></a>多线程基础</h1><h2 id="线程与进程区别"><a href="#线程与进程区别" class="headerlink" title="线程与进程区别"></a>线程与进程区别</h2><p>每个正在系统上运行的程序都是一个进程。每个进程包含一到多个线程。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。使用线程可以把占据时间长的程序中的任务放到后台去处理，程序的运行速度可能加快，在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下可以释放一些珍贵的资源如内存占用等等。如果有大量的线程,会影响性能，因为操作系统需要在它们之间切换，更多的线程需要更多的内存空间，线程的中止需要考虑其对程序运行的影响。通常块模型数据是在多个线程间共享的，需要防止线程死锁情况的发生。</p>
+<p><strong>总结:进程是所有线程的集合，每一个线程是进程中的一条执行路径</strong></p>
+<h2 id="多线程创建方式"><a href="#多线程创建方式" class="headerlink" title="多线程创建方式"></a>多线程创建方式</h2><ol>
+<li>第一种继承 Thread 类 重写 run 方法</li>
+<li>第二种实现 Runnable 接口,重写 run 方法</li>
+<li>第三种使用匿名内部类方式</li>
+</ol>
+<h2 id="获取线程对象以及名称"><a href="#获取线程对象以及名称" class="headerlink" title="获取线程对象以及名称"></a>获取线程对象以及名称</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li><strong>start() 启动线程</strong></li>
+<li><strong>currentThread() 获取当前线程对象</strong></li>
+<li>getID() 获取当前线程 ID Thread-编号   该编号从 0 开始</li>
+<li>getName() 获取当前线程名称</li>
+<li><strong>sleep(long mill) 休眠线程</strong></li>
+<li>Stop() 停止线程</li>
+</ul>
+<h3 id="常构造函数"><a href="#常构造函数" class="headerlink" title="常构造函数"></a>常构造函数</h3><ul>
+<li>Thread() 分配一个新的 Thread 对象</li>
+<li>Thread(String name) 分配一个新的 Thread 对象，具有指定的 name 正如其名。</li>
+<li><strong>Thread(Runable r) 分配一个新的 Thread 对象</strong></li>
+<li>Thread(Runable r, String name) 分配一个新的 Thread 对象</li>
+</ul>
+<h2 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h2><p>Java 中有两种线程，一种是用户线程，另一种是守护线程。<br><strong>用户线程</strong>是指用户自定义创建的线程，主线程停止，用户线程不会停止。<br><strong>守护线程</strong>当进程不存在或主线程停止，守护线程也会被停止。<br><strong>使用 setDaemon(true)方法设置为守护线程</strong></p>
+<h2 id="多线程运行状态"><a href="#多线程运行状态" class="headerlink" title="多线程运行状态"></a>多线程运行状态</h2><blockquote>
+<p>线程从创建、运行到结束总是处于下面五个状态之一：新建状态、就绪状态、运行状态、阻塞状态及死亡状态。</p>
+</blockquote>
+<h3 id="新建状态"><a href="#新建状态" class="headerlink" title="新建状态"></a>新建状态</h3><p>当用 new 操作符创建一个线程时， 例如 new Thread(r)，线程还没有开始运行，此时线程处在新建状态。 <strong>当一个线程处于新生状态时，程序还没有开始运行线程中的代码</strong>。</p>
+<h3 id="就绪状态"><a href="#就绪状态" class="headerlink" title="就绪状态"></a>就绪状态</h3><p>一个新创建的线程并不自动开始运行，要执行线程，必须调用线程的 start()方法。当线程对象调用 start()方法即启动了线程，start()方法创建线程运行的系统资源，并调度线程运行 run()方法。<strong>当 start()方法返回后，线程就处于就绪状态。处于就绪状态的线程并不一定立即运行 run()方法，线程还必须同其他线程竞争 CPU 时间，只有获得 CPU 时间才可以运行线程</strong>。因为在单 CPU 的计算机系统中，不可能同时运行多个线程，一个时刻仅有一个线程处于运行状态。因此此时可能有多个线程处于就绪状态。对多个处于就绪状态的线程是由 Java 运行时系统的线程调度程序(thread scheduler)来调度的。</p>
 <h3 id="运行状态"><a href="#运行状态" class="headerlink" title="运行状态"></a>运行状态</h3><p>当线程获得 CPU 时间后，它才进入运行状态，真正开始执行 run()方法.</p>
-<h3 id="阻塞状态"><a href="#阻塞状态" class="headerlink" title="阻塞状态"></a>阻塞状态</h3><p>线程运行过程中，可能由于各种原因进入阻塞状态:<br>        1&gt;线程通过调用 sleep 方法进入睡眠状态；<br>        2&gt;线程调用一个在 I/O 上被阻塞的操作，即该操作在输入输出操作完成之前不会返回到它的调用者；<br>        3&gt;线程试图得到一个锁，而该锁正被其他线程持有；<br>        4&gt;线程在等待某个触发条件；</p>
+<h3 id="阻塞状态"><a href="#阻塞状态" class="headerlink" title="阻塞状态"></a>阻塞状态</h3><p>线程运行过程中，可能由于各种原因进入阻塞状态:</p>
+<ul>
+<li>线程通过调用 sleep 方法进入睡眠状态；</li>
+<li>线程调用一个在 I/O 上被阻塞的操作，即该操作在输入输出操作完成之前不会返回到它的调用者；</li>
+<li>线程试图得到一个锁，而该锁正被其他线程持有；</li>
+<li>线程在等待某个触发条件；</li>
+</ul>
 <h3 id="死亡状态"><a href="#死亡状态" class="headerlink" title="死亡状态"></a>死亡状态</h3><p>有两个原因会导致线程死亡：</p>
-<p>  1) run 方法正常退出而自然死亡，<br>   2) 一个未捕获的异常终止了 run 方法而使线程猝死。<br>   为了确定线程在当前是否存活着（就是要么是可运行的，要么是被阻塞了），需要使用 isAlive 方法。如果是可运行或被阻塞，这个方法返回 true； 如果线程仍旧是 new 状态且不是可运行的， 或者线程死亡了，则返回 false.</p>
-<h2 id="join-方法作用"><a href="#join-方法作用" class="headerlink" title="join()方法作用"></a>join()方法作用</h2><p>当在主线程当中执行到 t1.join()方法时，就认为主线程应该把执行权让给 t1</p>
-<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>现代操作系统基本采用时分的形式调度运行的线程，线程分配得到的时间片的多少决定了线程使用处理器资源的多少，也对应了线程优先级这个概念。在 JAVA 线程中，通过一个 int priority 来控制优先级，范围为 1-10，其中 10 最高，默认值为 5。下面是源码（基于 1.8）中关于 priority 的一些量和方法。</p>
-<h2 id="Yield-方法"><a href="#Yield-方法" class="headerlink" title="Yield 方法"></a>Yield 方法</h2><p>Thread.yield()方法的作用：暂停当前正在执行的线程，并执行其他线程。（可能没有效果）<br>yield()让当前正在运行的线程回到可运行状态，以允许具有相同优先级的其他线程获得运行的机会。因此，使用 yield()的目的是让具有相同优先级的线程之间能够适当的轮换执行。但是，实际中无法保证 yield()达到让步的目的，因为，让步的线程可能被线程调度程序再次选中。<br>结论：大多数情况下，yield()将导致线程从运行状态转到可运行状态，但有可能没有效果。</p>
-<h2 id="面试题-1-进程与线程的区别？"><a href="#面试题-1-进程与线程的区别？" class="headerlink" title="面试题 1.进程与线程的区别？"></a>面试题 1.进程与线程的区别？</h2><p>答:进程是所有线程的集合，每一个线程是进程中的一条执行路径，线程只是一条执行路径。 2.为什么要用多线程？<br>答:提高程序效率 3.多线程创建方式？<br>答:继承 Thread 或 Runnable 接口。 4.是继承 Thread 类好还是实现 Runnable 接口好？<br>答:Runnable 接口好，因为实现了接口还可以继续继承。继承 Thread 类不能再继承。 5.你在哪里用到了多线程？<br>答:主要能体现到多线程提高程序效率。<br>举例:分批发送短信、迅雷多线程下载等。</p>
+<ul>
+<li>run 方法正常退出而自然死亡，</li>
+<li>一个未捕获的异常终止了 run 方法而使线程猝死。</li>
+</ul>
+<p>为了确定线程在当前是否存活着(就是要么是可运行的，要么是被阻塞了)，需要使用 isAlive 方法。如果是可运行或被阻塞，这个方法返回 true； 如果线程仍旧是 new 状态且不是可运行的， 或者线程死亡了，则返回 false.</p>
+<h2 id="join-方法作用"><a href="#join-方法作用" class="headerlink" title="join 方法作用"></a>join 方法作用</h2><p>当在主线程当中执行到 t1.join()方法时，就认为主线程应该把执行权让给 t1</p>
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>现代操作系统基本采用时分的形式调度运行的线程，线程分配得到的时间片的多少决定了线程使用处理器资源的多少，也对应了线程优先级这个概念。在 JAVA 线程中，通过一个 int priority 来控制优先级，范围为 1-10，其中 10 最高，默认值为 5。</p>
+<h2 id="Yield-方法"><a href="#Yield-方法" class="headerlink" title="Yield 方法"></a>Yield 方法</h2><p>Thread.yield()方法的作用：暂停当前正在执行的线程，并执行其他线程。(可能没有效果)。yield()让当前正在运行的线程回到可运行状态，以允许具有相同优先级的其他线程获得运行的机会。因此，使用 yield()的目的是让具有相同优先级的线程之间能够适当的轮换执行。但是，实际中无法保证 yield()达到让步的目的，因为，让步的线程可能被线程调度程序再次选中。</p>
+<p><strong>结论：大多数情况下，yield()将导致线程从运行状态转到可运行状态，但有可能没有效果。</strong></p>
+<h2 id="FQA"><a href="#FQA" class="headerlink" title="FQA"></a>FQA</h2><h3 id="1-进程与线程的区别？"><a href="#1-进程与线程的区别？" class="headerlink" title="1.进程与线程的区别？"></a>1.进程与线程的区别？</h3><p>答:进程是所有线程的集合，每一个线程是进程中的一条执行路径，线程只是一条执行路径。</p>
+<h3 id="2-多线程创建方式？"><a href="#2-多线程创建方式？" class="headerlink" title="2.多线程创建方式？"></a>2.多线程创建方式？</h3><p>答:继承 Thread 或 Runnable 接口。</p>
+<h3 id="3-为什么要使用多线程？多线程应用场景？"><a href="#3-为什么要使用多线程？多线程应用场景？" class="headerlink" title="3.为什么要使用多线程？多线程应用场景？"></a>3.为什么要使用多线程？多线程应用场景？</h3><p>答:主要能体现到多线程提高程序效率。<br>举例: 迅雷多线程下载、数据库连接池、分批发送短信等。</p>
+<h3 id="4-使用继承-Thread-类还是使用实现-Runnable-接口好？"><a href="#4-使用继承-Thread-类还是使用实现-Runnable-接口好？" class="headerlink" title="4.使用继承 Thread 类还是使用实现 Runnable 接口好？"></a>4.使用继承 Thread 类还是使用实现 Runnable 接口好？</h3><p>使用实现实现 Runnable 接口好，原因实现了接口还可以继续继承，继承了类不能再继承。</p>
+<h3 id="5-启动线程是使用调用-start-方法还是-run-方法？"><a href="#5-启动线程是使用调用-start-方法还是-run-方法？" class="headerlink" title="5.启动线程是使用调用 start 方法还是 run 方法？"></a>5.启动线程是使用调用 start 方法还是 run 方法？</h3><p>开始执行线程 注意 开启线程不是调用 run 方法，而是 start 方法<br>调用 run 知识使用实例调用方法。</p>
 
     </div>
 
@@ -324,8 +358,8 @@
       <i class="fa fa-chevron-left"></i> 高等数学（一）
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/01/16/AOV%E7%BD%91%E4%B8%8E%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" rel="next" title="AOV网与拓扑排序">
-      AOV网与拓扑排序 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/01/16/%E7%BA%BF%E6%80%A7%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C/" rel="next" title="线性链表及其操作">
+      线性链表及其操作 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -385,7 +419,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程快速入门"><span class="nav-number">1.</span> <span class="nav-text">多线程快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程与进程区别"><span class="nav-number">1.1.</span> <span class="nav-text">线程与进程区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要使用多线程？多线程应用场景？"><span class="nav-number">1.2.</span> <span class="nav-text">为什么要使用多线程？多线程应用场景？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程创建方式"><span class="nav-number">1.3.</span> <span class="nav-text">多线程创建方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取线程对象以及名称"><span class="nav-number">1.4.</span> <span class="nav-text">获取线程对象以及名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#守护线程"><span class="nav-number">1.5.</span> <span class="nav-text">守护线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程运行状态"><span class="nav-number">1.6.</span> <span class="nav-text">多线程运行状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建状态"><span class="nav-number">1.6.1.</span> <span class="nav-text">新建状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#就绪状态"><span class="nav-number">1.6.2.</span> <span class="nav-text">就绪状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行状态"><span class="nav-number">1.6.3.</span> <span class="nav-text">运行状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞状态"><span class="nav-number">1.6.4.</span> <span class="nav-text">阻塞状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#死亡状态"><span class="nav-number">1.6.5.</span> <span class="nav-text">死亡状态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#join-方法作用"><span class="nav-number">1.7.</span> <span class="nav-text">join()方法作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优先级"><span class="nav-number">1.8.</span> <span class="nav-text">优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Yield-方法"><span class="nav-number">1.9.</span> <span class="nav-text">Yield 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试题-1-进程与线程的区别？"><span class="nav-number">1.10.</span> <span class="nav-text">面试题 1.进程与线程的区别？</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程基础"><span class="nav-number">1.</span> <span class="nav-text">多线程基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程与进程区别"><span class="nav-number">1.1.</span> <span class="nav-text">线程与进程区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程创建方式"><span class="nav-number">1.2.</span> <span class="nav-text">多线程创建方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取线程对象以及名称"><span class="nav-number">1.3.</span> <span class="nav-text">获取线程对象以及名称</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用方法"><span class="nav-number">1.3.1.</span> <span class="nav-text">常用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常构造函数"><span class="nav-number">1.3.2.</span> <span class="nav-text">常构造函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#守护线程"><span class="nav-number">1.4.</span> <span class="nav-text">守护线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程运行状态"><span class="nav-number">1.5.</span> <span class="nav-text">多线程运行状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建状态"><span class="nav-number">1.5.1.</span> <span class="nav-text">新建状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#就绪状态"><span class="nav-number">1.5.2.</span> <span class="nav-text">就绪状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行状态"><span class="nav-number">1.5.3.</span> <span class="nav-text">运行状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞状态"><span class="nav-number">1.5.4.</span> <span class="nav-text">阻塞状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#死亡状态"><span class="nav-number">1.5.5.</span> <span class="nav-text">死亡状态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#join-方法作用"><span class="nav-number">1.6.</span> <span class="nav-text">join 方法作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优先级"><span class="nav-number">1.7.</span> <span class="nav-text">优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Yield-方法"><span class="nav-number">1.8.</span> <span class="nav-text">Yield 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FQA"><span class="nav-number">1.9.</span> <span class="nav-text">FQA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进程与线程的区别？"><span class="nav-number">1.9.1.</span> <span class="nav-text">1.进程与线程的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-多线程创建方式？"><span class="nav-number">1.9.2.</span> <span class="nav-text">2.多线程创建方式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-为什么要使用多线程？多线程应用场景？"><span class="nav-number">1.9.3.</span> <span class="nav-text">3.为什么要使用多线程？多线程应用场景？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-使用继承-Thread-类还是使用实现-Runnable-接口好？"><span class="nav-number">1.9.4.</span> <span class="nav-text">4.使用继承 Thread 类还是使用实现 Runnable 接口好？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-启动线程是使用调用-start-方法还是-run-方法？"><span class="nav-number">1.9.5.</span> <span class="nav-text">5.启动线程是使用调用 start 方法还是 run 方法？</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
