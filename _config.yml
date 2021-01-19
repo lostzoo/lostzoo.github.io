@@ -103,7 +103,8 @@ plugins:
     repo: github.io.comment
     owner: lostzoo
     admin: lostzoo
-    distractionFreeMode: false
+    id: location.pathname
+    distractionFreeMode: true
 
 # Local Search
 search:
