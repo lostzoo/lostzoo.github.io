@@ -98,6 +98,8 @@ theme: next
 plugins:
   gitalk:
     enable: true
+    github_id: lostzoo
+    id: location.pathname
     ClientID: bf5a3e7272912648eb25
     ClientSecret: 800f7f079fbf92149e338f5f8d841cf766637e27
     repo: github.io.comment
