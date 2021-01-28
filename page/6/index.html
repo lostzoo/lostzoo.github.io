@@ -142,7 +142,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">63</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">65</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -213,6 +213,460 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/15/1-1%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/15/1-1%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">多线程快速入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-01-16T00:00:00+08:00">2021-01-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">并发编程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">多线程基础</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="多线程基础"><a href="#多线程基础" class="headerlink" title="多线程基础"></a>多线程基础</h1><h2 id="线程与进程区别"><a href="#线程与进程区别" class="headerlink" title="线程与进程区别"></a>线程与进程区别</h2><p>每个正在系统上运行的程序都是一个进程。每个进程包含一到多个线程。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。使用线程可以把占据时间长的程序中的任务放到后台去处理，程序的运行速度可能加快，在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下可以释放一些珍贵的资源如内存占用等等。如果有大量的线程,会影响性能，因为操作系统需要在它们之间切换，更多的线程需要更多的内存空间，线程的中止需要考虑其对程序运行的影响。通常块模型数据是在多个线程间共享的，需要防止线程死锁情况的发生。</p>
+<p><strong>总结:进程是所有线程的集合，每一个线程是进程中的一条执行路径</strong></p>
+<h2 id="多线程创建方式"><a href="#多线程创建方式" class="headerlink" title="多线程创建方式"></a>多线程创建方式</h2><ol>
+<li>第一种继承 Thread 类 重写 run 方法</li>
+<li>第二种实现 Runnable 接口,重写 run 方法</li>
+<li>第三种使用匿名内部类方式</li>
+</ol>
+<h2 id="获取线程对象以及名称"><a href="#获取线程对象以及名称" class="headerlink" title="获取线程对象以及名称"></a>获取线程对象以及名称</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li><strong>start() 启动线程</strong></li>
+<li><strong>currentThread() 获取当前线程对象</strong></li>
+<li>getID() 获取当前线程 ID Thread-编号   该编号从 0 开始</li>
+<li>getName() 获取当前线程名称</li>
+<li><strong>sleep(long mill) 休眠线程</strong></li>
+<li>Stop() 停止线程</li>
+</ul>
+<h3 id="常构造函数"><a href="#常构造函数" class="headerlink" title="常构造函数"></a>常构造函数</h3><ul>
+<li>Thread() 分配一个新的 Thread 对象</li>
+<li>Thread(String name) 分配一个新的 Thread 对象，具有指定的 name 正如其名。</li>
+<li><strong>Thread(Runable r) 分配一个新的 Thread 对象</strong></li>
+<li>Thread(Runable r, String name) 分配一个新的 Thread 对象</li>
+</ul>
+<h2 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h2><p>Java 中有两种线程，一种是用户线程，另一种是守护线程。<br><strong>用户线程</strong>是指用户自定义创建的线程，主线程停止，用户线程不会停止。<br><strong>守护线程</strong>当进程不存在或主线程停止，守护线程也会被停止。<br><strong>使用 setDaemon(true)方法设置为守护线程</strong></p>
+<h2 id="多线程运行状态"><a href="#多线程运行状态" class="headerlink" title="多线程运行状态"></a>多线程运行状态</h2><blockquote>
+<p>线程从创建、运行到结束总是处于下面五个状态之一：新建状态、就绪状态、运行状态、阻塞状态及死亡状态。</p>
+</blockquote>
+<h3 id="新建状态"><a href="#新建状态" class="headerlink" title="新建状态"></a>新建状态</h3><p>当用 new 操作符创建一个线程时， 例如 new Thread(r)，线程还没有开始运行，此时线程处在新建状态。 <strong>当一个线程处于新生状态时，程序还没有开始运行线程中的代码</strong>。</p>
+<h3 id="就绪状态"><a href="#就绪状态" class="headerlink" title="就绪状态"></a>就绪状态</h3><p>一个新创建的线程并不自动开始运行，要执行线程，必须调用线程的 start()方法。当线程对象调用 start()方法即启动了线程，start()方法创建线程运行的系统资源，并调度线程运行 run()方法。<strong>当 start()方法返回后，线程就处于就绪状态。处于就绪状态的线程并不一定立即运行 run()方法，线程还必须同其他线程竞争 CPU 时间，只有获得 CPU 时间才可以运行线程</strong>。因为在单 CPU 的计算机系统中，不可能同时运行多个线程，一个时刻仅有一个线程处于运行状态。因此此时可能有多个线程处于就绪状态。对多个处于就绪状态的线程是由 Java 运行时系统的线程调度程序(thread scheduler)来调度的。</p>
+<h3 id="运行状态"><a href="#运行状态" class="headerlink" title="运行状态"></a>运行状态</h3><p>当线程获得 CPU 时间后，它才进入运行状态，真正开始执行 run()方法.</p>
+<h3 id="阻塞状态"><a href="#阻塞状态" class="headerlink" title="阻塞状态"></a>阻塞状态</h3><p>线程运行过程中，可能由于各种原因进入阻塞状态:</p>
+<ul>
+<li>线程通过调用 sleep 方法进入睡眠状态；</li>
+<li>线程调用一个在 I/O 上被阻塞的操作，即该操作在输入输出操作完成之前不会返回到它的调用者；</li>
+<li>线程试图得到一个锁，而该锁正被其他线程持有；</li>
+<li>线程在等待某个触发条件；</li>
+</ul>
+<h3 id="死亡状态"><a href="#死亡状态" class="headerlink" title="死亡状态"></a>死亡状态</h3><p>有两个原因会导致线程死亡：</p>
+<ul>
+<li>run 方法正常退出而自然死亡，</li>
+<li>一个未捕获的异常终止了 run 方法而使线程猝死。</li>
+</ul>
+<p>为了确定线程在当前是否存活着(就是要么是可运行的，要么是被阻塞了)，需要使用 isAlive 方法。如果是可运行或被阻塞，这个方法返回 true； 如果线程仍旧是 new 状态且不是可运行的， 或者线程死亡了，则返回 false.</p>
+<h2 id="join-方法作用"><a href="#join-方法作用" class="headerlink" title="join 方法作用"></a>join 方法作用</h2><p>当在主线程当中执行到 t1.join()方法时，就认为主线程应该把执行权让给 t1</p>
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>现代操作系统基本采用时分的形式调度运行的线程，线程分配得到的时间片的多少决定了线程使用处理器资源的多少，也对应了线程优先级这个概念。在 JAVA 线程中，通过一个 int priority 来控制优先级，范围为 1-10，其中 10 最高，默认值为 5。</p>
+<h2 id="Yield-方法"><a href="#Yield-方法" class="headerlink" title="Yield 方法"></a>Yield 方法</h2><p>Thread.yield()方法的作用：暂停当前正在执行的线程，并执行其他线程。(可能没有效果)。yield()让当前正在运行的线程回到可运行状态，以允许具有相同优先级的其他线程获得运行的机会。因此，使用 yield()的目的是让具有相同优先级的线程之间能够适当的轮换执行。但是，实际中无法保证 yield()达到让步的目的，因为，让步的线程可能被线程调度程序再次选中。</p>
+<p><strong>结论：大多数情况下，yield()将导致线程从运行状态转到可运行状态，但有可能没有效果。</strong></p>
+<h2 id="FQA"><a href="#FQA" class="headerlink" title="FQA"></a>FQA</h2><h3 id="1-进程与线程的区别？"><a href="#1-进程与线程的区别？" class="headerlink" title="1.进程与线程的区别？"></a>1.进程与线程的区别？</h3><p>答:进程是所有线程的集合，每一个线程是进程中的一条执行路径，线程只是一条执行路径。</p>
+<h3 id="2-多线程创建方式？"><a href="#2-多线程创建方式？" class="headerlink" title="2.多线程创建方式？"></a>2.多线程创建方式？</h3><p>答:继承 Thread 或 Runnable 接口。</p>
+<h3 id="3-为什么要使用多线程？多线程应用场景？"><a href="#3-为什么要使用多线程？多线程应用场景？" class="headerlink" title="3.为什么要使用多线程？多线程应用场景？"></a>3.为什么要使用多线程？多线程应用场景？</h3><p>答:主要能体现到多线程提高程序效率。<br>举例: 迅雷多线程下载、数据库连接池、分批发送短信等。</p>
+<h3 id="4-使用继承-Thread-类还是使用实现-Runnable-接口好？"><a href="#4-使用继承-Thread-类还是使用实现-Runnable-接口好？" class="headerlink" title="4.使用继承 Thread 类还是使用实现 Runnable 接口好？"></a>4.使用继承 Thread 类还是使用实现 Runnable 接口好？</h3><p>使用实现实现 Runnable 接口好，原因实现了接口还可以继续继承，继承了类不能再继承。</p>
+<h3 id="5-启动线程是使用调用-start-方法还是-run-方法？"><a href="#5-启动线程是使用调用-start-方法还是-run-方法？" class="headerlink" title="5.启动线程是使用调用 start 方法还是 run 方法？"></a>5.启动线程是使用调用 start 方法还是 run 方法？</h3><p>开始执行线程 注意 开启线程不是调用 run 方法，而是 start 方法<br>调用 run 知识使用实例调用方法。</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/08/27/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6(%E4%B8%80)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/27/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6(%E4%B8%80)/" class="post-title-link" itemprop="url">高等数学（一）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-27 13:50:30" itemprop="dateCreated datePublished" datetime="2020-08-27T13:50:30+08:00">2020-08-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">高等数学</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86/" itemprop="url" rel="index"><span itemprop="name">一元微积分</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>高等数学（一）<ul>
+<li>函数<ul>
+<li>函数的表示方式<ul>
+<li>分段函数</li>
+<li>复合函数</li>
+<li>隐函数</li>
+<li>参数方程表示的函数</li>
+<li>变限积分函数</li>
+<li>反函数</li>
+<li>基本初等函数</li>
+<li>初等函数</li>
+</ul>
+</li>
+<li>函数的初等特性<ul>
+<li>单调性</li>
+<li>奇偶性</li>
+<li>周期性</li>
+<li>有界性</li>
+</ul>
+</li>
+<li>初等函数性质<ul>
+<li>连续性<ul>
+<li>连续、左右连续</li>
+<li>间断点和类型</li>
+</ul>
+</li>
+<li>渐近线<ul>
+<li>水平渐近线</li>
+<li>垂直渐近线</li>
+<li>斜渐近线</li>
+</ul>
+</li>
+<li>闭区间连续函数<ul>
+<li>有界性</li>
+<li>最值定理</li>
+<li>介值定理</li>
+<li>零点定理</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>极限<ul>
+<li>分类<ul>
+<li>数列极限</li>
+<li>函数极限</li>
+</ul>
+</li>
+<li>计算<ul>
+<li>极限定义和性质</li>
+<li>极限四则运算</li>
+<li>等价无穷小替换</li>
+<li>洛必达法则</li>
+<li>佩亚诺余项泰勒公式</li>
+<li>极限存在准则<ul>
+<li>夹逼定理</li>
+<li>单调有界</li>
+</ul>
+</li>
+<li>两个重要极限</li>
+<li>积分和式求极限</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>连续性</li>
+<li>间断点</li>
+<li>渐近线</li>
+<li>导数定义</li>
+<li>积分定义</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>导数与微分<ul>
+<li>概念<ul>
+<li>导数、左右导数</li>
+<li>微分</li>
+<li>高阶导数</li>
+</ul>
+</li>
+<li>性质<ul>
+<li>可导与连续</li>
+<li>左右导数与可导</li>
+<li>可导与可微</li>
+<li>微分与增量的关系</li>
+</ul>
+</li>
+<li>计算<ul>
+<li>导数(微分)四则运算</li>
+<li>基本初等函数的求导公式</li>
+<li>变限积分求导</li>
+<li>参数方程求导</li>
+<li>隐函数求导</li>
+<li>幂指函数求导</li>
+<li>反函数求导一二阶</li>
+<li>n阶导数四则与莱布尼兹公式</li>
+<li>常见的n阶导数公式</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>极值与单调性判定<ul>
+<li>单调性判定</li>
+<li>可导处极值必要条件</li>
+<li>极值的第一充分条件</li>
+<li>极值的第二充分条件</li>
+</ul>
+</li>
+<li>凹凸性与拐点判定<ul>
+<li>凹凸性判定</li>
+<li>二阶可导点处拐点的必要条件</li>
+<li>拐点的充分条件</li>
+</ul>
+</li>
+<li>闭区间的连续函数<ul>
+<li>最大值</li>
+<li>最小值</li>
+</ul>
+</li>
+<li>渐近线的求法</li>
+<li>曲率、曲率圆、曲率半径</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>微分中值定理<ul>
+<li>定理<ul>
+<li>费马定理</li>
+<li>罗尔定理</li>
+<li>拉格朗日中值定理</li>
+<li>柯西中值定理</li>
+<li>泰勒定理<ul>
+<li>拉格朗日余项泰勒中值定理</li>
+<li>佩亚诺余项中值定理</li>
+<li>麦克劳林公式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>不等式证明<ul>
+<li>单调性证明法</li>
+<li>最值证明法</li>
+<li>拉格朗日中值定理</li>
+<li>泰勒公式（拉格朗日余项）</li>
+</ul>
+</li>
+<li>零点问题<ul>
+<li>介值定理</li>
+<li>零点定理</li>
+<li>罗尔定理</li>
+<li>导函数的零点存在性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>积分学<ul>
+<li>概念<ul>
+<li>原函数与不定积分</li>
+<li>定积分极限形式定义</li>
+</ul>
+</li>
+<li>定理<ul>
+<li>定积分存在定理</li>
+<li>原函数存在定理</li>
+<li>变上限函数对上限变量求导（不定积分与定积分关系）</li>
+<li>牛顿-莱布尼兹定理</li>
+</ul>
+</li>
+<li>性质<ul>
+<li>不定积分基本性质</li>
+<li>定积分基本性质</li>
+<li>定积分中值定理</li>
+</ul>
+</li>
+<li>计算<ul>
+<li>基本积分公式</li>
+<li>换元积分<ul>
+<li>凑微法(第一类换元积分)</li>
+<li>换元积分(第二类换元积分)</li>
+</ul>
+</li>
+<li>分部积分法</li>
+<li>定积分常用特性</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>微元法<ul>
+<li>定积分几何应用<ul>
+<li>平面图形面积</li>
+<li>平面曲线弧长</li>
+<li>旋转体的体积和侧面积</li>
+<li>平行截面面积已知的立体体积</li>
+</ul>
+</li>
+<li>定积分的物理应用<ul>
+<li>功</li>
+<li>引力</li>
+<li>侧压力</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>证明<ul>
+<li>讨论变限积分所定义的函数的极值、导数、奇偶性、周期性、单调性、求被积分函数</li>
+<li>讨论定积分或变限积分的不等式或者定积分变限积分的零点问题</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>反常积分<ul>
+<li>分类<ul>
+<li>无穷区间的反常积分</li>
+<li>无界函数的反常积分</li>
+</ul>
+</li>
+<li>判定收敛性</li>
+<li>伽马函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/31/%20%E8%BE%A9%E8%AF%81%E6%B3%95%E7%9A%84%E4%B8%A4%E5%A4%A7%E7%89%B9%E5%BE%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -244,7 +698,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -362,7 +816,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -476,7 +930,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -581,7 +1035,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -685,7 +1139,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -822,7 +1276,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -964,7 +1418,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1114,7 +1568,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
+                <time title="修改时间：2021-01-28 13:35:15" itemprop="dateModified" datetime="2021-01-28T13:35:15+08:00">2021-01-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1172,324 +1626,6 @@
 <li><input checked="" disabled="" type="checkbox"> secular</li>
 <li><input checked="" disabled="" type="checkbox"> herb</li>
 <li><input checked="" disabled="" type="checkbox"> routine</li>
-</ul>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/14/%E5%8D%81%E5%A4%A9%E8%8B%B1%E8%AF%AD(%E4%B8%80)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/%E5%8D%81%E5%A4%A9%E8%8B%B1%E8%AF%AD(%E4%B8%80)/" class="post-title-link" itemprop="url">十天英语(一)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-14 10:00:30" itemprop="dateCreated datePublished" datetime="2020-07-14T10:00:30+08:00">2020-07-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%81%E5%A4%A9%E8%8B%B1%E8%AF%AD/" itemprop="url" rel="index"><span itemprop="name">十天英语</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%81%E5%A4%A9%E8%8B%B1%E8%AF%AD/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/" itemprop="url" rel="index"><span itemprop="name">英语单词</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h1><h2 id="Unit-1"><a href="#Unit-1" class="headerlink" title="Unit 1"></a>Unit 1</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> accord</li>
-<li><input checked="" disabled="" type="checkbox"> advocate</li>
-<li><input checked="" disabled="" type="checkbox"> amendment</li>
-<li><input checked="" disabled="" type="checkbox"> architect</li>
-<li><input checked="" disabled="" type="checkbox"> beam</li>
-<li><input checked="" disabled="" type="checkbox"> beard</li>
-<li><input checked="" disabled="" type="checkbox"> cap</li>
-<li><input checked="" disabled="" type="checkbox"> captive</li>
-<li><input checked="" disabled="" type="checkbox"> career</li>
-<li><input checked="" disabled="" type="checkbox"> cast</li>
-<li><input checked="" disabled="" type="checkbox"> coax</li>
-<li><input checked="" disabled="" type="checkbox"> commission</li>
-<li><input checked="" disabled="" type="checkbox"> cottage</li>
-<li><input checked="" disabled="" type="checkbox"> counter</li>
-<li><input checked="" disabled="" type="checkbox"> counterculture</li>
-<li><input checked="" disabled="" type="checkbox"> creep</li>
-<li><input checked="" disabled="" type="checkbox"> debate</li>
-<li><input checked="" disabled="" type="checkbox"> debt</li>
-<li><input checked="" disabled="" type="checkbox"> decent</li>
-<li><input checked="" disabled="" type="checkbox"> distinct</li>
-<li><input checked="" disabled="" type="checkbox"> distort</li>
-<li><input checked="" disabled="" type="checkbox"> e-commerce</li>
-<li><input checked="" disabled="" type="checkbox"> elegant</li>
-<li><input checked="" disabled="" type="checkbox"> elicit</li>
-<li><input checked="" disabled="" type="checkbox"> foe</li>
-<li><input checked="" disabled="" type="checkbox"> forge</li>
-<li><input checked="" disabled="" type="checkbox"> genre</li>
-<li><input checked="" disabled="" type="checkbox"> giggle</li>
-<li><input checked="" disabled="" type="checkbox"> harsh</li>
-<li><input checked="" disabled="" type="checkbox"> haste</li>
-<li><input checked="" disabled="" type="checkbox"> haul</li>
-<li><input checked="" disabled="" type="checkbox"> hawk</li>
-<li><input checked="" disabled="" type="checkbox"> haze</li>
-<li><input checked="" disabled="" type="checkbox"> headhunter</li>
-<li><input checked="" disabled="" type="checkbox"> hindrance</li>
-<li><input checked="" disabled="" type="checkbox"> imitate</li>
-<li><input checked="" disabled="" type="checkbox"> incite</li>
-<li><input checked="" disabled="" type="checkbox"> indictment</li>
-<li><input checked="" disabled="" type="checkbox"> intrusiveness</li>
-<li><input checked="" disabled="" type="checkbox"> laureate</li>
-<li><input checked="" disabled="" type="checkbox"> lawsuit</li>
-<li><input checked="" disabled="" type="checkbox"> lawyer</li>
-<li><input checked="" disabled="" type="checkbox"> lean</li>
-<li><input checked="" disabled="" type="checkbox"> lucrative</li>
-<li><input checked="" disabled="" type="checkbox"> manner</li>
-<li><input checked="" disabled="" type="checkbox"> marine</li>
-<li><input checked="" disabled="" type="checkbox"> neural</li>
-<li><input checked="" disabled="" type="checkbox"> newsprint</li>
-<li><input checked="" disabled="" type="checkbox"> omnivore</li>
-<li><input checked="" disabled="" type="checkbox"> onerous</li>
-<li><input checked="" disabled="" type="checkbox"> onion</li>
-<li><input checked="" disabled="" type="checkbox"> paraphrase</li>
-<li><input checked="" disabled="" type="checkbox"> partial</li>
-<li><input checked="" disabled="" type="checkbox"> perception</li>
-<li><input checked="" disabled="" type="checkbox"> permanent</li>
-<li><input checked="" disabled="" type="checkbox"> pile</li>
-<li><input checked="" disabled="" type="checkbox"> preside</li>
-<li><input checked="" disabled="" type="checkbox"> pupil</li>
-<li><input checked="" disabled="" type="checkbox"> purchase</li>
-<li><input checked="" disabled="" type="checkbox"> raw</li>
-<li><input checked="" disabled="" type="checkbox"> reinterpretation</li>
-<li><input checked="" disabled="" type="checkbox"> reliance</li>
-<li><input checked="" disabled="" type="checkbox"> scale</li>
-<li><input checked="" disabled="" type="checkbox"> steadily</li>
-<li><input checked="" disabled="" type="checkbox"> stressed-out</li>
-<li><input checked="" disabled="" type="checkbox"> strip</li>
-<li><input checked="" disabled="" type="checkbox"> stripe</li>
-<li><input checked="" disabled="" type="checkbox"> strive</li>
-<li><input checked="" disabled="" type="checkbox"> stuffy</li>
-<li><input checked="" disabled="" type="checkbox"> stun</li>
-<li><input checked="" disabled="" type="checkbox"> subconscious</li>
-<li><input checked="" disabled="" type="checkbox"> subsequence</li>
-<li><input checked="" disabled="" type="checkbox"> swallow</li>
-<li><input checked="" disabled="" type="checkbox"> tempt</li>
-<li><input checked="" disabled="" type="checkbox"> terror</li>
-<li><input checked="" disabled="" type="checkbox"> unconventional</li>
-<li><input checked="" disabled="" type="checkbox"> unconventional</li>
-<li><input checked="" disabled="" type="checkbox"> veteran</li>
-<li><input checked="" disabled="" type="checkbox"> vibrate</li>
-<li><input checked="" disabled="" type="checkbox"> weird</li>
-<li><input checked="" disabled="" type="checkbox"> whereby</li>
-<li><input checked="" disabled="" type="checkbox"> stun</li>
-</ul>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2020/07/13/%E9%A9%AC%E5%8E%9F%E7%90%86%E6%80%BB%E8%AE%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/%E9%A9%AC%E5%8E%9F%E7%90%86%E6%80%BB%E8%AE%BA/" class="post-title-link" itemprop="url">马原理总论</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-13 22:05:30" itemprop="dateCreated datePublished" datetime="2020-07-13T22:05:30+08:00">2020-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-19 16:52:32" itemprop="dateModified" datetime="2021-01-19T16:52:32+08:00">2021-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/" itemprop="url" rel="index"><span itemprop="name">考研政治</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/%E9%A9%AC%E5%8E%9F%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">马原理</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/%E9%A9%AC%E5%8E%9F%E7%90%86/%E6%80%BB%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">总论</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="考研政治"><a href="#考研政治" class="headerlink" title="考研政治"></a>考研政治</h1><ul>
-<li><p>1.重点标示(绿、黄、白)</p>
-</li>
-<li><p>2.框架搭建- 3.做好笔记</p>
-</li>
-<li><p>总论</p>
-</li>
-<li><p><strong>哲学</strong></p>
-<ul>
-<li>哲学基本问题</li>
-<li>唯物论</li>
-<li>辩证法</li>
-<li>认识论</li>
-<li>唯物史观</li>
-</ul>
-</li>
-<li><p>政经</p>
-</li>
-<li><p>科社</p>
-</li>
-</ul>
-<h1 id="总论"><a href="#总论" class="headerlink" title="总论"></a>总论</h1><ul>
-<li>马克思主义的内涵和构成(白)<ul>
-<li>马克思主义的内涵</li>
-<li>马克思主义的构成</li>
-</ul>
-</li>
-<li>马克主义的立场、观点和方法(黄)<ul>
-<li>马克思主义的基本立场</li>
-<li>马克思主义的基本观点</li>
-<li>马克思主义的基本方法</li>
-</ul>
-</li>
-<li>马克思主义的来源(黄)<ul>
-<li>社会根源</li>
-<li>阶级根源</li>
-<li>思想渊源</li>
-</ul>
-</li>
-<li>马克思主义的鲜明特征(黄)<ul>
-<li>科学性</li>
-<li>革命性</li>
-<li>实践性</li>
-<li>人民性</li>
-<li>发展开放性</li>
-</ul>
-</li>
-<li>马克思主义的当代价值(白)<ul>
-<li>观察当代世界变化的认识工具</li>
-<li>指引当代中国发展的行动指南</li>
-<li>引领人类社会进步的科学真理</li>
-</ul>
-</li>
 </ul>
 
 <div id="gitalk-container"></div>
@@ -1588,7 +1724,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
