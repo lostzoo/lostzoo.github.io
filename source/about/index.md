@@ -5,5 +5,5 @@ comments: false
 type: "about"
 ---
 ## About me
-Lostzoo...
+冬的blog 后端研发 系统架构 机器学习 表征学习
 
