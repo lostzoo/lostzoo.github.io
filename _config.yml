@@ -97,9 +97,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 ## theme: landscape
-# theme: next
-remote_theme： next
-
+theme: next
 plugins:
   gitalk:
     enable: true
