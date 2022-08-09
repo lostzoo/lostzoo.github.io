@@ -67,7 +67,8 @@ jobs:
           npm install
           npm uninstall hexo-generator-index --save
           npm install hexo-deployer-git --save
-
+          npm install hexo-theme-next --save
+          
       - name: Deploy hexo
         run: |
           hexo clean && hexo generate && hexo deploy
