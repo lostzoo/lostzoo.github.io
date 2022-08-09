@@ -132,17 +132,17 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">18</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">65</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">54</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -213,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E9%98%9F%E5%88%97%E7%9A%84%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -227,7 +227,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/28/%E9%98%9F%E5%88%97%E7%9A%84%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">队列的链式存储结构</a>
+            <a href="/2022/08/09/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" class="post-title-link" itemprop="url">最短路径</a>
         </h2>
 
         <div class="post-meta">
@@ -237,590 +237,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="队列的链式存储结构"><a href="#队列的链式存储结构" class="headerlink" title="队列的链式存储结构"></a>队列的链式存储结构</h1><p>#数据结构/入门/堆栈与队列/队列/链式存储</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E7%BA%BF%E6%80%A7%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/28/%E7%BA%BF%E6%80%A7%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">线性链表及其操作</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="线性链表及其操作"><a href="#线性链表及其操作" class="headerlink" title="线性链表及其操作"></a>线性链表及其操作</h1><p>#数据结构/入门/线性表/线性链表</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E6%95%B0%E7%BB%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BA%94%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/28/%E6%95%B0%E7%BB%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BA%94%E7%94%A8/" class="post-title-link" itemprop="url">数组的基本应用</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="数组的基本应用"><a href="#数组的基本应用" class="headerlink" title="数组的基本应用"></a>数组的基本应用</h1><p>#数据结构/入门/数组/基本应用</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E6%95%B0%E7%BB%84%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/28/%E6%95%B0%E7%BB%84%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">数组的存储结构</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="数组的存储结构"><a href="#数组的存储结构" class="headerlink" title="数组的存储结构"></a>数组的存储结构</h1><p>#数据结构/入门/数组/顺序结构</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/28/%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">数组的概念</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="数组的概念"><a href="#数组的概念" class="headerlink" title="数组的概念"></a>数组的概念</h1><p>#数据结构/入门/数组/概念</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E6%96%87%E4%BB%B6%E6%A6%82%E8%BF%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/28/%E6%96%87%E4%BB%B6%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">文件概述</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="文件概述"><a href="#文件概述" class="headerlink" title="文件概述"></a>文件概述</h1><p>#数据结构/高级/文件与查找/概述</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8A%80%E5%B7%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/28/%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">方法与技巧</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="方法与技巧"><a href="#方法与技巧" class="headerlink" title="方法与技巧"></a>方法与技巧</h1><h1 id="方法与技巧-1"><a href="#方法与技巧-1" class="headerlink" title="方法与技巧"></a>方法与技巧</h1><p>我们为熊掌记开发了许多实用功能，帮助你将想法尽快变成文字。继续阅读了解实用技巧。</p>
-<p>如果你想从头开始学习，你可以查看[欢迎使用熊掌记]、[管理与发布]以及[Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…]。</p>
-<h2 id="高级搜索-🔎"><a href="#高级搜索-🔎" class="headerlink" title="高级搜索 🔎"></a>高级搜索 🔎</h2><p>熊掌记可以在你的所有笔记中快速搜索。熊掌记同时提供许多<span class="exturl" data-url="aHR0cDovL2JlYXIuYXBwL2ZhcS9BZHZhbmNlZCUyMHNlYXJjaCUyMG9wdGlvbnMlMjBpbiUyMEJlYXIv">高级搜索参数<i class="fa fa-external-link-alt"></i></span>，允许你只搜索特定类型的笔记内容。</p>
-<p>例如，在搜索框中输入<code>@待办</code>可找到所有带任务的笔记，搜索<code>@文件</code>则可查看所有带附件的笔记。你还可以使用<code>@图片</code><em>仅</em>搜索带有图像附件的笔记。最后，你还可以使用双引号来精确搜索词语，例如：<code>“阿熊最酷”</code>。</p>
-<h2 id="浏览器和应用程序扩展-🧩"><a href="#浏览器和应用程序扩展-🧩" class="headerlink" title="浏览器和应用程序扩展 🧩"></a>浏览器和应用程序扩展 🧩</h2><p>从其他应用程序收集文本、图像、附件和网页内容十分容易。了解如何为 <span class="exturl" data-url="aHR0cDovL2JlYXIuYXBwL2NuL2ZhcS9FeHRlbnNpb25zL2lPUyUyMEFwcCUyMEV4dGVuc2lvbi8=">iPad 与 iPhone<i class="fa fa-external-link-alt"></i></span> 以及 <span class="exturl" data-url="aHR0cDovL2JlYXIuYXBwL2NuL2ZhcS9FeHRlbnNpb25zL0Jyb3dzZXIlMjBleHRlbnNpb25zLw==">Mac<i class="fa fa-external-link-alt"></i></span> 添加熊掌记扩展及其使用方法。</p>
-<h2 id="点击标签-🏷"><a href="#点击标签-🏷" class="headerlink" title="点击标签 🏷"></a>点击标签 🏷</h2><p>熊掌记中所有的标签都可长按。要使用此功能，请确保没有进入编辑模式，通过键盘使用 Command + Return ，或在 iOS 滑动来隐藏键盘。</p>
-<p>然后，在任何笔记中，点击像 #欢迎 这样的标签，笔记列表就会出现，并显示所有包含该标签的笔记。</p>
-<p>在 Mac 上，你可以隐藏侧边栏和/或笔记列表，享受无干扰的写作环境（iOS 上自动提供这种环境 😉）。使用布局选择器（右下角图标）查看可用选项。</p>
-<h2 id="将笔记链接起来-⛓"><a href="#将笔记链接起来-⛓" class="headerlink" title="将笔记链接起来 ⛓"></a>将笔记链接起来 ⛓</h2><p>你可以在熊掌记中将多篇笔记链接在一起。你可通过链接在同一项目的多篇笔记之间快速跳转，随心管理，或者像我们一样用多篇笔记欢迎熊掌记的新用户。😉</p>
-<p>链接一篇笔记到另一篇：</p>
-<ul>
-<li>在笔记中的任何位置，键入两个左方括号，就像这样：<strong>[</strong></li>
-<li>输入要链接的文字内容</li>
-<li>输入时会出现提示框为您建议内容</li>
-<li>选择一篇为您建议的笔记，熊掌记即会自动插入笔记名称，生成链接，并在结尾补上方括号。</li>
-</ul>
-<p><strong>提示</strong>：如果你使用的是 Mac 或 iPad 的键盘，则可以使用方向键和 Return 键来选择建议的笔记。</p>
-<h2 id="我们的社区-👥"><a href="#我们的社区-👥" class="headerlink" title="我们的社区 👥"></a>我们的社区 👥</h2><p>熊掌记的用户在我们热闹的社区中分享观点、技巧、工作方法，还能找到为熊掌记设计的实用小工具。开始探索并了解熊掌记的更多内容，请访问：</p>
-<ul>
-<li><a href="www.weibo.com/xiongzhangji">官方微博</a></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9iZWFyLmFwcC9jbi8jY29tbXVuaXR5">官方微信<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmJlYXIuYXBw">熊掌记与写作<i class="fa fa-external-link-alt"></i></span> - 我们的英文博客</li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9yZWRkaXQuY29tL3IvQmVhckFwcA==">Reddit/r/BearApp<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9CZWFyTm90ZXNBcHA=">Twitter<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL0JlYXJOb3Rlcy8=">Facebook<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NidXNzby9CZWFyLVBvd2VyLVBhY2svYmxvYi9tYXN0ZXIvUkVBRE1FLm1k">Bear Power Pack<i class="fa fa-external-link-alt"></i></span> - 支持熊掌记的第三方工具集合</li>
-</ul>
-<h2 id="反馈-💬"><a href="#反馈-💬" class="headerlink" title="反馈 💬"></a>反馈 💬</h2><p>我们<strong>希望</strong>了解您的心声，请将您的建议和反馈发送到<span class="exturl" data-url="bWFpbHRvOmJlYXJAc2hpbnlmcm9nLm5ldA==">bear@shinyfrog.net<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>如果你喜欢熊掌记，请为我们在 <span class="exturl" data-url="aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS9jbi9hcHAvJUU3JTg2JThBJUU2JThFJThDJUU4JUFFJUIwL2lkMTAxNjM2NjQ0Nw==">App Store<i class="fa fa-external-link-alt"></i></span> 和 <span class="exturl" data-url="aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS9jbi9hcHAvJUU3JTg2JThBJUU2JThFJThDJUU4JUFFJUIwL2lkMTA5MTE4OTEyMj9tdD0xMg==">Mac App Store<i class="fa fa-external-link-alt"></i></span> 中评分及评论。这会帮助我们做得更好！</p>
-<p>感谢使用熊掌记，祝你写作愉快！<br>🎉 🐻 🎉</p>
-<h3 id="了解更多"><a href="#了解更多" class="headerlink" title="了解更多"></a>了解更多</h3><p>[欢迎使用熊掌记]<br>[管理与发布]<br>[Bear Pro = 同步+加密+多种导出格式+更多主题+未来更多…]</p>
-<p>#欢迎/方法与技巧 #欢迎/管理</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/28/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" class="post-title-link" itemprop="url">最小生成树</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><p>#数据结构/进阶/图/最小生成树</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/28/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" class="post-title-link" itemprop="url">最短路径</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
             </span>
 
           
@@ -865,7 +282,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2021/01/28/%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -879,7 +296,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/28/%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">树的基本概念</a>
+            <a href="/2022/08/09/%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">树的基本概念</a>
         </h2>
 
         <div class="post-meta">
@@ -889,7 +306,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-01-28 13:39:56" itemprop="dateCreated datePublished" datetime="2021-01-28T13:39:56+08:00">2021-01-28</time>
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
             </span>
 
           
@@ -930,10 +347,562 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E6%A6%82%E8%BF%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">概述</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>#数据结构/高级/内排序/概述</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">泡排序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="泡排序"><a href="#泡排序" class="headerlink" title="泡排序"></a>泡排序</h1><p>#数据结构/高级/内排序/泡排序</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8/" class="post-title-link" itemprop="url">矩阵的压缩存储</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="矩阵的压缩存储"><a href="#矩阵的压缩存储" class="headerlink" title="矩阵的压缩存储"></a>矩阵的压缩存储</h1><p>#数据结构/入门/数组/矩阵压缩</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E7%9A%84%E4%B8%89%E5%85%83%E7%BB%84%E8%A1%A8%E8%A1%A8%E7%A4%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E7%9A%84%E4%B8%89%E5%85%83%E7%BB%84%E8%A1%A8%E8%A1%A8%E7%A4%BA/" class="post-title-link" itemprop="url">稀疏矩阵的三元组表表示</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="稀疏矩阵的三元组表表示"><a href="#稀疏矩阵的三元组表表示" class="headerlink" title="稀疏矩阵的三元组表表示"></a>稀疏矩阵的三元组表表示</h1><p>#数据结构/入门/数组/稀疏矩阵</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E7%B4%A2%E5%BC%95%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E7%B4%A2%E5%BC%95%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">索引文件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="索引文件"><a href="#索引文件" class="headerlink" title="索引文件"></a>索引文件</h1><p>#数据结构/高级/文件与查找/索引文件</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">线性表的定义及其基本操作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="线性表的定义及其基本操作"><a href="#线性表的定义及其基本操作" class="headerlink" title="线性表的定义及其基本操作"></a>线性表的定义及其基本操作</h1><p>#数据结构/入门/线性表/定义与操作</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">线性表的顺序存储结构</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h1><p>#数据结构/入门/线性表/顺序存储</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2022/08/09/%E7%BA%BF%E6%80%A7%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E7%BA%BF%E6%80%A7%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">线性链表及其操作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-09 23:00:37" itemprop="dateCreated datePublished" datetime="2022-08-09T23:00:37+08:00">2022-08-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="线性链表及其操作"><a href="#线性链表及其操作" class="headerlink" title="线性链表及其操作"></a>线性链表及其操作</h1><p>#数据结构/入门/线性表/线性链表</p>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1001,20 +970,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">54</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1052,7 +1021,7 @@
 <div class="copyright">
   
   &copy; 2020 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
