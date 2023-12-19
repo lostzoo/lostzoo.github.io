@@ -227,7 +227,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/12/20/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95&%E6%97%A5%E5%BF%97%E6%8A%80%E6%9C%AF/" class="post-title-link" itemprop="url">Linux实战</a>
+            <a href="/2023/12/20/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95&%E6%97%A5%E5%BF%97%E6%8A%80%E6%9C%AF/" class="post-title-link" itemprop="url">单元测试 日志技术 代码复核</a>
         </h2>
 
         <div class="post-meta">
@@ -238,7 +238,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="代码复核"><a href="#代码复核" class="headerlink" title="代码复核"></a>代码复核</h1><aside>
+💡 This template documents how to review code. Helpful for new and remote employees to get and stay aligned.
+
+</aside>
+
+<h1 id="Philosophy"><a href="#Philosophy" class="headerlink" title="Philosophy"></a>Philosophy</h1><p>Why do you perform code reviews? What are your guiding principles for these reviews?</p>
+<p>You may want to mention other pages here. Like Engineering Guidelines. To link to another page inline, type <code>@</code> followed by the name of the page: <span class="exturl" data-url="aHR0cHM6Ly93d3cubm90aW9uLnNvL2JlZjEyZmMxNTU5NDRkYzZhMTlhMTAxMzA1ZmZmMDFjP3B2cz0yMQ==">开发规范<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="Preparing-Code-for-Review"><a href="#Preparing-Code-for-Review" class="headerlink" title="Preparing Code for Review"></a>Preparing Code for Review</h1><p>Preparation sets your reviewers up for success.</p>
+<h3 id="Commit-Messages"><a href="#Commit-Messages" class="headerlink" title="Commit Messages"></a>Commit Messages</h3><p>Make sure your commit messages are descriptive. </p>
+<h3 id="Github-PR-Descriptions"><a href="#Github-PR-Descriptions" class="headerlink" title="Github PR Descriptions"></a>Github PR Descriptions</h3><p>Your PR descriptions should be an extension of your commit messages. Write about both what the commit changes, and how you implemented the change. </p>
+<h1 id="Performing-Code-Reviews"><a href="#Performing-Code-Reviews" class="headerlink" title="Performing Code Reviews"></a>Performing Code Reviews</h1><h3 id="How-to-Review"><a href="#How-to-Review" class="headerlink" title="How to Review"></a>How to Review</h3><ul>
+<li>Make two passes over the PR if it’s substantial.<ul>
+<li>On the first pass, come to an understanding of the code change at a high level.</li>
+<li>On the second pass, pay more attention to semantic details.</li>
+</ul>
+</li>
+</ul>
+<h1 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> commentCount = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>You might suggest that this be a <code>let</code> instead of <code>var</code>.</p>
+
 <div id="gitalk-container"></div>
 <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
@@ -320,89 +340,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E7%A6%BB%E7%BA%BF%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">大数据Hadoop离线分布式系统</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2023/12/20/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92K8s/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/20/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92K8s/" class="post-title-link" itemprop="url">容器编排K8s</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -484,7 +422,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -497,6 +435,88 @@
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E4%BA%91%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index"><span itemprop="name">云计算</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2023/12/20/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92K8s/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/12/20/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92K8s/" class="post-title-link" itemprop="url">容器编排K8s</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E7%A6%BB%E7%BA%BF%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">大数据Hadoop离线分布式系统</span></a>
                 </span>
             </span>
 
@@ -566,7 +586,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -579,88 +599,6 @@
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">主流框架</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2023/12/20/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8EElasticSearch/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dong Zi">
-      <meta itemprop="description" content="Technology Note">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dong Zi'Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/20/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8EElasticSearch/" class="post-title-link" itemprop="url">搜索引擎ElasticSearch</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E9%97%B4%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">数据库中间件</span></a>
                 </span>
             </span>
 
@@ -730,7 +668,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -743,6 +681,88 @@
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"bf5a3e7272912648eb25","clientSecret":"800f7f079fbf92149e338f5f8d841cf766637e27","repo":"github.io.comment","owner":"lostzoo","admin":"lostzoo","id":"location.pathname","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lostzoo.github.io/2023/12/20/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8EElasticSearch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dong Zi">
+      <meta itemprop="description" content="Technology Note">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dong Zi'Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/12/20/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8EElasticSearch/" class="post-title-link" itemprop="url">搜索引擎ElasticSearch</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E9%97%B4%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">数据库中间件</span></a>
                 </span>
             </span>
 
@@ -812,7 +832,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -894,7 +914,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -976,7 +996,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:09:21" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
+              <time title="创建时间：2023-12-20 00:00:00 / 修改时间：02:15:52" itemprop="dateCreated datePublished" datetime="2023-12-20T00:00:00+08:00">2023-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
