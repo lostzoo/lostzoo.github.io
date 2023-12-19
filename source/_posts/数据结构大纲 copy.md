@@ -1,0 +1,80 @@
+---
+title: 数据结构大纲
+date: 2023-12-20 00:15:00
+categories:
+  - 大数据路线图
+tags:
+  - 大数据
+---
+# 目录
+## 大数据技术路线
+### 开发环境
+  - [ ] 1.{% post_link Linux实战 %}
+  - [ ] 2.{% post_link VSCode编程工具 %}
+  - [ ] 3.{% post_link Git %}
+  - [ ] 4.{% post_link Maven %}
+  - [ ] 5.{% post_link Shell编程 %}
+### Java基础
+  - [ ] 1.{% post_link 基础语法 %}
+  - [ ] 2.{% post_link 面向对象 %}
+  - [ ] 3.{% post_link 集合基础 %}
+  - [ ] 4.{% post_link IO流 %}
+  - [ ] 5.{% post_link 多线程 %}
+  - [ ] 6.{% post_link 网络编程 %}
+### Java进阶
+  - [ ] 1.{% post_link 类加载器&反射 %}
+  - [ ] 2.{% post_link Xml语言 %}
+  - [ ] 3.{% post_link Lambda & 范式编程 & 枚举 %}
+  - [ ] 4.{% post_link 单元测试&日志技术 %}
+  - [ ] 5.{% post_link JVM优化 %}
+### 数据库中间件
+  - [ ] 3.{% post_link MySQL %}
+  - [ ] 4.{% post_link Mybatis %}
+  - [ ] 5.{% post_link Redis %}
+  - [ ] 6.{% post_link 搜索引擎ElasticSearch %}
+### 主流框架
+  - [ ] 1.{% post_link Spring %}
+  - [ ] 2.{% post_link SpringMVC %}
+  - [ ] 3.{% post_link SpringBoot开发 %}
+  - [ ] 4.{% post_link 微服务SpringCloud %}
+  - [ ] 5.{% post_link Dubbo %}
+  - [ ] 6.{% post_link Zookeeper %}
+  - [ ] 7.{% post_link 消息中间件RabbitMQ %}
+  - [ ] 2.{% post_link Nginx %}
+### 大数据Hadoop离线分布式系统
+  - [ ] 1.{% post_link 大数据Hadoop生态和硬件介绍 %}
+  - [ ] 2.{% post_link Zookeeper组件 %}
+  - [ ] 3.{% post_link HDFS组件 %}
+  - [ ] 4.{% post_link MapReduce组件 %}
+  - [ ] 5.{% post_link Yarn组件 %}
+  - [ ] 6.{% post_link Hive组件 %}
+  - [ ] 7.{% post_link Impala组件 %}
+  - [ ] 8.{% post_link 辅助系统工具 %}
+### 大数据NoSQL、Kafka和ELK技术实践
+  - [ ] 1.{% post_link Redis组件 %}
+  - [ ] 2.{% post_link Hbase组件 %}
+  - [ ] 3.{% post_link Kafka组件 %}
+  - [ ] 4.{% post_link ELK技术栈 %}
+### 大数据Spark内存计算系统
+  - [ ] 1.{% post_link Scala语言 %}
+  - [ ] 2.{% post_link Spark %}
+  - [ ] 3.{% post_link SparkSql %}
+  - [ ] 4.{% post_link SparkStream %}
+  - [ ] 5.{% post_link CDH搭建 %}
+### 大数据Flink实时计算系统
+  - [ ] 1.{% post_link Flink基础 %}
+  - [ ] 2.{% post_link Flink进阶 %}
+### 大数据新技术实战详解
+  - [ ] 1.{% post_link druid集群 %}
+### 机器学习
+  - [ ] 1.{% post_link Python基础 %}
+  - [ ] 2.{% post_link Python数据分析 %}
+  - [ ] 3.{% post_link 用户标签预测 %}
+  - [ ] 4.{% post_link 推荐系统 %}
+  - [ ] 5.{% post_link CTR点击率预估 %}
+### 云计算
+  - [ ] 1.{% post_link 虚拟化 %}
+  - [ ] 2.{% post_link 阿里云 %}
+  - [ ] 3.{% post_link 私有云 %}
+  - [ ] 4.{% post_link 容器Docker %}
+  - [ ] 5.{% post_link 容器编排K8s %}
