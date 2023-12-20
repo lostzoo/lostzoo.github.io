@@ -17,11 +17,23 @@ tags:
 - ctrl + X 剪切当前行
 - ctrl + alt + L 格式化代码 
 - alt + 回车 提示
-- ctrl + / 注释
+- ctrl + / 行注释
+- ctrl + shift + / 块注释
 - alt + shift + 方向键上 上移当前行
 - alt + shift + 方向键下 下移当前行
 - alt + shift + 方向键左 跳转上一个停留位置
 - alt + shift + 方向键右 跳转下一个停留位置
+- ctrl + alt + B 跳转到抽象方法的实现
+- ctrl + alt + T 包围代码段
+- ctrl + E 查看最近文件
+- ctrl + shift + V 从剪贴板历史记录粘贴
+- Alt + Insert 代码生成
+- ctrl + J 查看后缀模板建议
+- alt + 后引号 VCS相关命令查看 
+- ctrl + shift + 回车 补全代码结构
+- ctrl + shift + 空格 类型匹配代码补全
+- 两次shift 搜索
+
 
 # Debug
 - F7 步入 step into ，如果当前行有方法，可以进入方法内部，一般进入自定义方法，不会进入官方类库方法
